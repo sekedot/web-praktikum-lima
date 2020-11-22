@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mata uang</title>
+	
+</head>
+<body>
+	<div class="container" id="satu">
+		<h1>Kurs Mata Uang</h1>
+		<label>Masukkan sejumlah uang</label>
+		<input type="text" value="" id="uang">
+		<select id="select">
+			<option>-- Pilih Mata Uang --</option>
+			<option value="dollar">Dollar</option>
+			<option value="dollarsg">Dollar Singapore</option>
+			<option value="ringgit">Ringgit</option>
+			<option value="yen">Yen</option>
+			<option value="euro">Euro</option>
+			<option value="riyal">Riyal</option>
+		</select>
+
+		<input type="button" id="convert" value="convert">
+	</div>
+
+	<script>
+		const content = document.getElementById(satu);
+		const h2 = document.createElement('h2');
+		const tombol = document.getElementById(convert);
+
+		convert.onclick = function () {
+			satu.appendChild(h2);
+			let uang = Number(document.getElementById("uang").value);
+			let pilihan = document.getElementById("select").value;
+			let hasil = document.querySelector("h2");
+
+			if (pilihan == 'dollar') {
+				hasil.innerHTML = (uang * 9915) + ' Rupiah';
+			} else if (pilihan == 'dollarsg') {
+				hasil.innerHTML = (uang * 13472) + ' Rupiah';
+			} else if (pilihan == 'ringgit') {
+				hasil.innerHTML = (uang * 874) + ' Rupiah';
+			} else if (pilihan == 'yen') {
+				hasil.innerHTML = (uang * 120) + ' Rupiah';
+			} else if (pilihan == 'euro') {
+				hasil.innerHTML = (uang * 15888) + ' Rupiah';
+			} else if (pilihan == 'riyal') {
+				hasil.innerHTML = (uang * 3592) + ' Rupiah';
+			}
+
+		}
+	</script>
+</body>
+</html>
